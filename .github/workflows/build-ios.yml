@@ -26,11 +26,12 @@ jobs:
               key_id: ENV["KEY_ID"],
               issuer_id: ENV["ISSUER_ID"],
               key_content: ENV["PRIVATE_KEY"],
+              is_key_content_base64: true,
               in_house: false
             )
             
             upload_to_testflight(
-              ipa: ENV["GITHUB_WORKSPACE"] + "/App.ipa",
+              ipa: ENV["GITHUB_WORKSPACE"] + "/app.ipa",
               skip_submission: true,
               skip_waiting_for_build_processing: true
             )
